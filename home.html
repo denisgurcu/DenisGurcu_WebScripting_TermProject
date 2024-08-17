@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis Gurcu Portfolio</title>
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <!-- General GSAP library that is needed both for my split text and yoyo animation-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- GSAP split text library, normally this is paid, this is a trial version that only works in local files-->
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+
+    <!-- GSAP scroll trigger CDN that I used for my split text-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Scroll reveal, I used this for my homepage content-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Three JS library for the 3D canvas-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- JQuery library for Slick Slider to Work-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Slider CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">D.</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="logos.html">Logos</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero-->
+    <section class="hero">
+    <!-- This canvas is for three .js. It will be appended here.-->
+        <div class="canvas-container"></div>
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div class="hero-text-wrapper">
+                    <div class="hero-hello">Hello!</div>
+                    <div class="hero-line">I'm Denis.</div>
+                    <div class="hero-line">A multi-disciplinary</div>
+                    <div class="hero-line">designer.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About-->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-grid">
+                <h2 class="about-title">About Me</h2>
+                <div class="about-image">
+                    <img src="assets/images/denis.jpeg" alt="Denis">
+                </div>
+                <div class="about-text">
+                    <p>
+                        I am a passionate and driven individual with a diverse background spanning over 10 years. After a rewarding career in the finance industry, I took a leap of faith to pursue my true passion—technology and design. My journey has led me to work on various AI solution projects and as a social media manager for indie video games, where I honed my skills in creative problem-solving and digital strategy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Details -->
+    <section id="about-details">
+        <div class="about-details-container">
+            <div class="about-details-grid">
+                <div class="about-details-col">
+                    <p class="about-details-text">I love working with colors and shapes, and I enjoy seeing how different art forms can come together to create something beautiful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Works Section -->
+<section id="works">
+    <div class="works-container">
+        <h2 class="works-title">See My Works</h2>
+        <div class="works-slider">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <a href="logos.html" target="logos">
+                    <div class="overlay">
+                        <span class="overlay-text">Logo Designs</span>
+                    </div>
+                    <img src="assets/images/logoslidercover.png" alt="Work 1">
+                </a>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <a href="photography.html" target="photography">
+                    <div class="overlay">
+                        <span class="overlay-text">Photography</span>
+                    </div>
+                    <img src="assets/images/photoslidercover.jpeg" alt="Work 2">
+                </a>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <a href="#">
+                    <div class="overlay">
+                        <span class="overlay-text">Poster Designs</span>
+                    </div>
+                    <img src="assets/images/postercover.png" alt="Work 3">
+                </a>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="footer-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="logos.html">Logos</a></li>
+            </ul>
+            <div class="contact-info">Contact me</div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
